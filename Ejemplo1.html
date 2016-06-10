@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>Mi primer scrip</title>
+</head>
+<body>
+	<script lenguaje="javascript">
+	var nro1;
+	var nro2;
+	function enviar (ingreso) {
+		nro1=parseInt(ingreso.value);
+	}
+	function enviar2 (ingreso) {
+		nro2=parseInt(ingreso.value)
+	}
+	function calcularsuma () {
+		document.form1.res.value=nro1+nro2;
+	}
+	</script>
+
+	<form name="form1">
+		Numero 1 <input type="text" onchange="enviar(this)" />+<br/>
+		Numero 2 <input type="text" onchange="enviar2(this)" /><br/>
+		Resultado <input id="res" type="text" /><br/>
+		<input type="button" value= "Sumar" onClick="calcularsuma()" />
+	</form>
+</body>
+</html>

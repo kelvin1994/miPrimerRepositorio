@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>Mi Segundo scrip</title>
+	<script lenguaje="javascript">
+	var nro1;
+	var nro2;
+	var op;
+	var result;
+	function enviar (ingreso) {
+		nro1=parseFloat(ingreso.value);
+	}
+	function enviar2 (ingreso) {
+		nro2=parseFloat(ingreso.value)
+	}
+	function calcular() {
+		op = parseInt(document.form.op.value);
+		switch(op)
+		{
+			case 1 : result=nro1+nro2;break;
+			case 2 : result=nro1-nro2;break;
+			case 3 : result=nro1*nro2;break;
+			case 4 : result=nro1/nro2;break;
+		}
+		document.form.res.value=parseFloat(result);	
+	}
+	</script>
+	</head>
+	<body>
+		<h2>Operaciones con dos Numeros</h2>
+	<form name="form">
+		Digite el primer numero  <input type="text" onchange="enviar(this)" /><br/>
+		Digite el segundo numero <input type="text" onchange="enviar2(this)" /><br/>
+		Selecione opcion
+		<select name="op">
+			<option value="1">+
+			<option value="2">-
+			<option value="3">*
+			<option value="4">/
+		</select><br/>
+		<input type="button" value= "Calcular" onClick="calcular()" /> <br/>
+		Resultado <input type="text" id="res"/><br/>
+		<input type="button" value= "Salir"/>
+	</form>
+</body>
+</html>
